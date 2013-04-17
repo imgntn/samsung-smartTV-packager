@@ -21,7 +21,8 @@ var builder = require('xmlbuilder');
 var doc = builder.create();
 var stringlib=require('string');
 var fs = require('fs');
-
+var mkdirp=require('mkdirp');
+var mv=require('mv')
 
 doc.begin('root')
   .ele('?xml')
@@ -51,3 +52,8 @@ fs.writeFile(widgetListXML, output, function(err) {
         console.log("The file was saved!");
     }
 }); 
+
+fs.mkdir('Widget')
+mv('widgetlist.xml','Widget/widgetlist.xml',function(err){
+console.log(err)
+})
