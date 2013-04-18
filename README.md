@@ -15,3 +15,4 @@ then move the contents of the packages folder to your web server root directory
 --->  i.e. move the Widget folder and widgetlist.xml file to your Apache folder (on OSX: /Library/WebServer/Documents ; MAMP: /Applications/MAMP/htdocs)
 
 ignore mkdir errors if the folders already exist -- if its not your first time packaging.  they don't break anything.
+
