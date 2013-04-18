@@ -6,7 +6,7 @@
 
 var mv=require('mv');
 var fs=require('fs');
-var archiver=require('archiver');
+
 var zip = require("adm-zip");
 
 var builder = require('xmlbuilder');
