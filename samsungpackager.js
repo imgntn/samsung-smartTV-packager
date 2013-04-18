@@ -1,4 +1,4 @@
-//to use -- node samsungpackager.js APPID APPTITLE SERVERIP
+//to use -- node samsungpackager.js pathToFolderToArchive APPID APPTITLE SERVERIP
 //then move the contents of the packages folder to your web server root directory 
 // i.e. move the Widget folder and widgetlist.xml file to your Apache folder (on OSX: /Library/WebServer/Documents    ; MAMP: /Applications/MAMP/htdocs)
 //ignore mkdir errors if the folders already exist -- if its not your first time packaging.  they don't break anything.
@@ -12,11 +12,12 @@ var zip = require("adm-zip");
 var builder = require('xmlbuilder');
 var stringlib=require('string');
 
-
+var folderToArchive;
+folderToArchive=process.argv[2];
 var myZip = new zip();
 
-myZip.addLocalFolder('../src');
-
+myZip.addLocalFolder(folderToArchive);
+// i.e. ../src
 
     	myZip.writeZip(/*target file name*/"samsungpackage.zip");
     	console.log('end of FIRST FUNCTION');
@@ -36,9 +37,10 @@ if(err){console.log(err)}
 
 
 var appID, appTitle, serverIP;
-appID = process.argv[2];
-appTitle=process.argv[3];
-serverIP=process.argv[4];
+
+appID = process.argv[3];
+appTitle=process.argv[4];
+serverIP=process.argv[5];
 
 
 
