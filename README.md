@@ -10,10 +10,13 @@ npm install
 
 then:
 node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP
+
 ---> i.e, node samsungpackager.js ../src Gaiam006 GaiamTV 192.168.0.25
 
 then manually move the contents of the packages folder to your web server root directory 
---->  i.e. move the Widget folder and widgetlist.xml file to your Apache folder (OSX native apache: /Library/WebServer/Documents or MAMP: /Applications/MAMP/htdocs)
+
+--->  i.e. move the Widget folder and widgetlist.xml file to your Apache folder 
+(OSX native apache: /Library/WebServer/Documents or MAMP: /Applications/MAMP/htdocs)
 
 ignore mkdir errors if the folders already exist -- if its not your first time packaging.  they don't break anything.
 
