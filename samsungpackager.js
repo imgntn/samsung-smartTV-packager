@@ -16,6 +16,26 @@ var folderToArchive;
 folderToArchive=process.argv[2];
 var myZip = new zip();
 
+deleteFolderRecursive = function(path) {
+    var files = [];
+    if( fs.existsSync(path) ) {
+        files = fs.readdirSync(path);
+        files.forEach(function(file,index){
+            var curPath = path + "/" + file;
+            if(fs.statSync(curPath).isDirectory()) { // recurse
+                deleteFolderRecursive(curPath);
+            } else { // delete file
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+    }
+};
+
+var deleteLogs=process.argv[6];
+deleteFolderRecursive(deleteLogs);
+deleteFolderRecursive('packages');
+
 myZip.addLocalFolder(folderToArchive);
 // i.e. ../src
 
@@ -81,10 +101,8 @@ if(err){console.log(err)}
 })
 
 
-// mv('widgetlist.xml','packages/widgetlist.xml',function(err){
-// if(err){console.log(err)}
-// 	else{console.log('moved that')}
-// })
+
+
 
 
 
