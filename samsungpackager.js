@@ -36,24 +36,35 @@ var deleteLogs=process.argv[6];
 deleteFolderRecursive(deleteLogs);
 deleteFolderRecursive('packages');
 
-myZip.addLocalFolder(folderToArchive);
+    fs.mkdir('packages',function (err) {
+    if (err) console.error(err)
+
+
+    else {
+        fs.mkdir('packages/Widget',function (err) {
+    if (err) console.error(err)
+    else console.log('pow!')
+});
+        console.log('pow!')
+        makeZip();
+    }
+});
+
+makeZip=function(){
+    myZip.addLocalFolder(folderToArchive);
 // i.e. ../src
 
-    	myZip.writeZip(/*target file name*/"samsungpackage.zip");
-    	console.log('end of FIRST FUNCTION');
-    	fs.mkdir('packages',function (err) {
-    if (err) console.error(err)
-    else console.log('pow!')
-});
-    	fs.mkdir('packages/Widget',function (err) {
-    if (err) console.error(err)
-    else console.log('pow!')
-});
+        myZip.writeZip(/*target file name*/"samsungpackage.zip");
+        console.log('end of FIRST FUNCTION');
 
-    	mv('samsungpackage.zip','packages/Widget/samsungpackage.zip',function(err){
+        
+
+        mv('samsungpackage.zip','packages/Widget/samsungpackage.zip',function(err){
 if(err){console.log(err)}
-	else{console.log('moved that')}
+    else{console.log('moved that')}
 })
+}
+
 
 
 var appID, appTitle, serverIP;
