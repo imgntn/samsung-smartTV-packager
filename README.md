@@ -9,7 +9,7 @@ first:
 npm install 
 
 then:
-<<<<<<< HEAD
+
 node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelete
 
 *the logs folder parameters is optional
