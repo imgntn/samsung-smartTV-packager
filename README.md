@@ -1,6 +1,6 @@
-samsung smart tv packager (2013)
-by james b. pollack
-www.adifferentengine.com
+samsung smart tv packager (2013)<br>
+by james b. pollack<br>
+www.adifferentengine.com<br>
 
 this script will let you package a folder containing a html5 app without touching the samsung SDK.  
 
@@ -14,7 +14,7 @@ then:
 
 <code>node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelete<code>
 
-*the logs folder parameters is optional
+*the logFolderToDelete parameter is optional
 
 ---> i.e: <code>node samsungpackager.js ../src GTV GTV 192.168.0.25 ../src/logs</code>
 
