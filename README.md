@@ -9,6 +9,7 @@ first:
 npm install 
 
 then:
+
 node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelete
 
 *the logs folder parameters is optional
@@ -17,7 +18,9 @@ node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelet
 *all paths relative to samsungpackager.js
 
 then manually move the contents of the packages folder to your web server root directory 
---->  i.e. move the Widget folder and widgetlist.xml file to your Apache folder (OSX native apache: /Library/WebServer/Documents or MAMP: /Applications/MAMP/htdocs)
+
+--->  i.e. move the Widget folder and widgetlist.xml file to your Apache folder 
+(OSX native apache: /Library/WebServer/Documents or MAMP: /Applications/MAMP/htdocs)
 
 *hoping to make this programmatic but its kind of hard for the node app to get to certain system files security-wise, as far as i know
 
