@@ -6,6 +6,9 @@
 
 var mv=require('mv');
 var fs=require('fs');
+var requestHandlers = require('./requesthandlers.js');
+var server = require("./server");
+var router = require("./route");
 
 var zip = require("adm-zip");
 
@@ -134,5 +137,13 @@ var childProcess = require('child_process'),
    console.log('Child process exited with exit code '+code);
  });
 
+
+var handle = {}
+handle["Widget"] = requestHandlers.widget;
+handle["widgetlist.xml"] = requestHandlers.widgetlist;
+
+
+var port = 80;
+server.start(router.route, handle, port);
 
 
