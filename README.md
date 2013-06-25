@@ -13,11 +13,8 @@ first <code>cd</code> into the folder containting this repo and:
 then:
 
 <code>sudo node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelete</code><br>
----> i.e: <code>node samsungpackager.js ../src GTV GTV 192.168.0.25 ../src/logs</code><br>
+---> i.e: <code>node samsungpackager.js ../src GTV GTV 192.168.0.25 ../src/logs</code><br><br>
 *the logFolderToDelete parameter is optional
-
-
-
 *all paths relative to samsungpackager.js
 
 the app will be served at localhost:80, just boot up your TV, point it at the correct IP address and sync your app.
