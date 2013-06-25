@@ -12,7 +12,7 @@ first <code>cd</code> into the folder containting this repo and:
 
 then:
 
-<code>sudo node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelete<code><br>
+<code>sudo node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelete</code><br>
 ---> i.e: <code>node samsungpackager.js ../src GTV GTV 192.168.0.25 ../src/logs</code>
 *the logFolderToDelete parameter is optional
 
