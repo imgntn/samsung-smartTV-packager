@@ -6,13 +6,13 @@ this script will let you package a folder containing a html5 app without touchin
 
 TO USE -- 
 
-first:  
+first <code>cd</code> into the folder containting this repo and:
 
 <code>npm install </code>
 
 then:
 
-<code>node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelete<code>
+<code>sudo node samsungpackager.js folderToArchive APPID APPTITLE SERVERIP logFolderToDelete<code>
 
 *the logFolderToDelete parameter is optional
 
