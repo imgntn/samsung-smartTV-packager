@@ -141,7 +141,7 @@ var childProcess = require('child_process'),
 var handle = {}
 handle["Widget"] = requestHandlers.widget;
 handle["widgetlist.xml"] = requestHandlers.widgetlist;
-
+handle["/"]=requestHandlers.slash;
 
 var port = 80;
 server.start(router.route, handle, port);
