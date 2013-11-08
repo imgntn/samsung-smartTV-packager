@@ -1,6 +1,6 @@
 <h1>samsung smart tv packager (2013)</h1>
 by james b. pollack<br>
-www.adifferentengine.com<br>
+
 
 this script will let you package a folder containing a html5 app without touching the samsung SDK.  
 
