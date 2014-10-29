@@ -4,6 +4,13 @@
   "description": "Helps you package HTML5 Apps for Samsung Smart TV without touching their SDK.",
   "author": "Raphael Luchini",
   "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/raphaelluchini/samsungstv-packager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raphaelluchini/samsungstv-packager/issues"
+  },
   "engine": "node >= 0.8.0",
   "devDependencies": {
     "adm-zip": "^0.4.4",
