@@ -1,5 +1,5 @@
 #Samsung SmartTv Packager (2013)
-
+@imgntn // @raphaelluchini 
 This script will let you package a folder containing a html5 app and a run a webserver, without touching the samsung SDK.
 
 ##Getting Started
